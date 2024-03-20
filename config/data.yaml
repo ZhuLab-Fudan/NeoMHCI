@@ -1,0 +1,5 @@
+mhc_seq: ./data/MHC_pseudo.dat
+cell_line: ./data/allelelist
+test: ./data/example_data.txt
+rawdata: ./data/motif.txt
+
