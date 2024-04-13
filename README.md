@@ -14,6 +14,7 @@ The following packages and their versions are required:
 * click == 7.1.2
 * ruamel.yaml == 0.16.12
 * tqdm == 4.56.0
+* fair-esm == 0.4.2
 
 ## Usage
 
@@ -52,5 +53,5 @@ The output results will be placed in `./motifs`.
 
 ## Declaration
 
-This tool is free for non-commercial use. For commercial use, please contact Mr. Wei Qu and Prof. Shanfeng Zhu (zhusf@fudan.edu.cn). See the LICENSE file for more details.
+This tool is free for non-commercial use. For commercial use, please contact Mr. Wei Qu and Prof. Shanfeng Zhu (zhusf@fudan.edu.cn).
 
