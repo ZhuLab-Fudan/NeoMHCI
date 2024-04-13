@@ -103,9 +103,8 @@ def main(data_cnf, model_cnf, mode, start_id, num_models, allele, motif_len, gpu
         
 if __name__ == '__main__':
     import shlex
-    # main()
-    # main(shlex.split('-d ./config/data.yaml -m ./config/model.yaml --mode test -s 0 -n 10 -g 3'))                
-    main(shlex.split('-d ./config/data.yaml -m ./config/model.yaml --mode motif -s 0 -n 1 -g 3 --allele LEIDEN-005-TISSUE --motif_len 9'))                
+    main()
+              
         
 
 
