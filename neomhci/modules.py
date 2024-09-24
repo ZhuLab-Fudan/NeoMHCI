@@ -52,7 +52,7 @@ class MIL_DotGateAttn(nn.Module):
         inter_gate = torch.sigmoid(torch.einsum('bm,ml->bl', inter_pre, self.weight))
         inter_ = torch.mul(inter_, inter_gate)
         attn_ = torch.einsum('bl,l->b', inter_, self.vec)
-        offsets = np.cumsum([0] + list(bags_size))
+        offsets = np.cumsum([0] + list(bags_size.cpu().detach().numpy())
         softmax_attn = torch.cat([F.softmax(attn_[i:j], dim=0) for i,j in zip(offsets[:-1], offsets[1:])], dim=0)
         inter_pre_bag = torch.stack([torch.einsum('b,bl->l', softmax_attn[i:j], inter_pre[i:j,:]) for i,j in zip(offsets[:-1], offsets[1:])])
         return {'debag_out': inter_pre_bag.unsqueeze(-1), 'MIL_attn': softmax_attn}
